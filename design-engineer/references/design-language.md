@@ -8,6 +8,7 @@ This reference is intentionally portable. It does not depend on private local pa
 
 Use these as live design references when network access is available. Inspect them for component behavior, composition, copy rhythm, primitive styling, and motion language. Do not clone them blindly; translate the patterns into the current repo's stack and tokens.
 
+- `https://www.components.build`: open standard for modern, composable, accessible UI components; use as the default engineering standard for reusable component APIs and design-system guidelines.
 - `https://docs.farming-labs.dev`: AI-native docs surface with install commands, agent prompts, framework tabs, themes, code/copy affordances, Ask AI, MCP, llms.txt, search, and agent-readiness ideas.
 - `https://farming-labs.dev`: compact Farming Labs brand/origin surface for the broader `@farming-labs/*` ecosystem.
 - `https://orm.farming-labs.dev`: technical OSS docs/product site for unified schema, typed runtime, and generator-first ORM tooling.
@@ -20,10 +21,30 @@ Use these as live design references when network access is available. Inspect th
 
 If the user also provides local paths to repos behind these websites, inspect those repos for implementation details. Useful places to look are `components/ui/*`, `app/page.tsx`, `app/globals.css`, `app/global.css`, `docs.config.*`, `components/*command*`, `components/*copy*`, `components/*code*`, `components/*theme*`, `components/*layout*`, dashboard widgets, and shared primitive files. Treat local paths as optional source material, not public package requirements.
 
+## Component Engineering Standard
+
+Use `https://www.components.build` as the baseline standard when creating or refactoring reusable UI primitives, component libraries, registries, or design-system components.
+
+Apply it this way:
+
+- Composition: prefer small cooperating parts over one large prop-heavy component. Use Root, Item, Trigger, Content, Header, Body, Footer, Title, and Description naming where it fits.
+- Accessibility: start with semantic HTML, provide keyboard access, visible focus indicators, accessible names, ARIA only when semantic HTML is insufficient, and live regions for dynamic feedback.
+- Design tokens: route repeated visual decisions through semantic tokens for color, spacing, radius, typography, border, shadow, and motion.
+- State: support controlled and uncontrolled patterns for flexible primitives when the component is intended for reuse.
+- Styling: use `cn(...)`, `clsx`, `tailwind-merge`, and CVA-style variants when the repo uses Tailwind/shadcn patterns. Order classes as base, variants, conditional state, then user `className`.
+- Types: wrap a single native element per primitive when possible, extend native `React.ComponentProps<...>`, export prop types, and keep consumer override paths open.
+- Polymorphism/asChild: use `asChild` or polymorphic rendering only when consumers genuinely need to change the underlying element without losing behavior.
+- Data attributes: expose stable `data-*` hooks for state styling such as `data-state`, `data-disabled`, `data-active`, `data-selected`, or `data-orientation`.
+- Documentation: document variants, sizes, states, anatomy, examples, and accessibility expectations for shared primitives.
+- Publishing: if the output is a component package or registry, keep exports, types, examples, docs, and install paths predictable.
+
+This standard should govern how primitives are built; the visual style below governs how they should feel.
+
 ## Inspirational Component Libraries
 
 Use component/block libraries as pattern references for structure and primitive behavior, not as a reason to ignore the target repo's design system.
 
+- components.build (`https://www.components.build`): inspect for component architecture standards, not surface styling; use it to shape APIs, composition, accessibility, state, styling, types, docs, and publishing.
 - FarmUI (`https://farmui.farming-labs.dev`): inspect for styled and animated shadcn-style primitives, button treatments, interactive controls, and UI-level motion.
 - Efferd (`https://efferd.com`): inspect for section-level blocks such as heroes, feature sections, pricing/comparison sections, testimonials, FAQ, CTA bands, auth forms, dashboards, and product-page composition.
 - 21st (`https://21st.dev`): inspect for community-made React components, interaction ideas, component-level polish, and remixable patterns that can be adapted into the target repo's primitives.
@@ -110,6 +131,7 @@ Useful local patterns to inspect when they exist in the target repo:
 ## Component And Token Guidance
 
 - Keep component APIs small and consistent with local primitives.
+- Use `components.build` as the default standard for reusable primitive APIs, anatomy, accessibility, tokenization, state, styling, typing, and docs.
 - Prefer `cn(...)`, `class-variance-authority`, `tailwind-merge`, and existing `components/ui/*` variants when present.
 - Avoid broad rewrites of shared primitives unless the primitive is the actual problem.
 - Define semantic tokens before scattering raw colors through components.
