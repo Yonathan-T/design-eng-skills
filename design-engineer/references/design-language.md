@@ -13,6 +13,7 @@ Use these as live design references when network access is available. Inspect th
 - `https://orm.farming-labs.dev`: technical OSS docs/product site for unified schema, typed runtime, and generator-first ORM tooling.
 - `https://farmui.farming-labs.dev`: FarmUI component reference for styled and animated shadcn-based primitives.
 - `https://efferd.com`: Efferd section/block library reference for clean, ready-to-use shadcn blocks, responsive section composition, and fast product-page assembly.
+- `https://21st.dev`: community React component reference for exploring, copying, and remixing high-quality UI components from designers and developers.
 - `https://better-auth.studio`: studio/admin product surface for users, sessions, organizations, events, database, and operational workflows.
 - `https://better-auth.com`: polished auth framework website/docs reference for refined dark UI, docs hierarchy, and technical product storytelling.
 
@@ -24,6 +25,7 @@ Use component/block libraries as pattern references for structure and primitive 
 
 - FarmUI (`https://farmui.farming-labs.dev`): inspect for styled and animated shadcn-style primitives, button treatments, interactive controls, and UI-level motion.
 - Efferd (`https://efferd.com`): inspect for section-level blocks such as heroes, feature sections, pricing/comparison sections, testimonials, FAQ, CTA bands, auth forms, dashboards, and product-page composition.
+- 21st (`https://21st.dev`): inspect for community-made React components, interaction ideas, component-level polish, and remixable patterns that can be adapted into the target repo's primitives.
 - shadcn/ui-compatible libraries: translate block structure into the current repo's tokens, radius, borders, type rhythm, icon policy, and accessibility behavior.
 
 When using a block as inspiration:
