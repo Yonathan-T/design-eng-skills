@@ -12,10 +12,28 @@ Use these as live design references when network access is available. Inspect th
 - `https://farming-labs.dev`: compact Farming Labs brand/origin surface for the broader `@farming-labs/*` ecosystem.
 - `https://orm.farming-labs.dev`: technical OSS docs/product site for unified schema, typed runtime, and generator-first ORM tooling.
 - `https://farmui.farming-labs.dev`: FarmUI component reference for styled and animated shadcn-based primitives.
+- `https://efferd.com`: Efferd section/block library reference for clean, ready-to-use shadcn blocks, responsive section composition, and fast product-page assembly.
 - `https://better-auth.studio`: studio/admin product surface for users, sessions, organizations, events, database, and operational workflows.
 - `https://better-auth.com`: polished auth framework website/docs reference for refined dark UI, docs hierarchy, and technical product storytelling.
 
 If the user also provides local paths to repos behind these websites, inspect those repos for implementation details. Useful places to look are `components/ui/*`, `app/page.tsx`, `app/globals.css`, `app/global.css`, `docs.config.*`, `components/*command*`, `components/*copy*`, `components/*code*`, `components/*theme*`, `components/*layout*`, dashboard widgets, and shared primitive files. Treat local paths as optional source material, not public package requirements.
+
+## Inspirational Component Libraries
+
+Use component/block libraries as pattern references for structure and primitive behavior, not as a reason to ignore the target repo's design system.
+
+- FarmUI (`https://farmui.farming-labs.dev`): inspect for styled and animated shadcn-style primitives, button treatments, interactive controls, and UI-level motion.
+- Efferd (`https://efferd.com`): inspect for section-level blocks such as heroes, feature sections, pricing/comparison sections, testimonials, FAQ, CTA bands, auth forms, dashboards, and product-page composition.
+- shadcn/ui-compatible libraries: translate block structure into the current repo's tokens, radius, borders, type rhythm, icon policy, and accessibility behavior.
+
+When using a block as inspiration:
+
+- keep the section's intent but rewrite copy and content for the product
+- adapt spacing, border language, radius, color, and typography to the current design system
+- compose from existing primitives first
+- include responsive behavior for mobile/tablet/desktop
+- preserve accessible labels, semantic landmarks, focus states, and keyboard flows
+- avoid adding decorative sections that do not advance the user's product workflow
 
 ## Product Archetypes
 
