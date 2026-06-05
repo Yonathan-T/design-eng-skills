@@ -14,6 +14,7 @@ Use these as live design references when network access is available. Inspect th
 - `https://farmui.farming-labs.dev`: FarmUI component reference for styled and animated shadcn-based primitives.
 - `https://efferd.com`: Efferd section/block library reference for clean, ready-to-use shadcn blocks, responsive section composition, and fast product-page assembly.
 - `https://21st.dev`: community React component reference for exploring, copying, and remixing high-quality UI components from designers and developers.
+- `https://react-bits.dev`: React Bits reference for animated UI components, interactive backgrounds, shader-like effects, text animations, and reusable React component ideas.
 - `https://better-auth.studio`: studio/admin product surface for users, sessions, organizations, events, database, and operational workflows.
 - `https://better-auth.com`: polished auth framework website/docs reference for refined dark UI, docs hierarchy, and technical product storytelling.
 
@@ -26,6 +27,7 @@ Use component/block libraries as pattern references for structure and primitive 
 - FarmUI (`https://farmui.farming-labs.dev`): inspect for styled and animated shadcn-style primitives, button treatments, interactive controls, and UI-level motion.
 - Efferd (`https://efferd.com`): inspect for section-level blocks such as heroes, feature sections, pricing/comparison sections, testimonials, FAQ, CTA bands, auth forms, dashboards, and product-page composition.
 - 21st (`https://21st.dev`): inspect for community-made React components, interaction ideas, component-level polish, and remixable patterns that can be adapted into the target repo's primitives.
+- React Bits (`https://react-bits.dev`): inspect for animated backgrounds, shader-style surfaces, cursor/interaction effects, text effects, loaders, and general React UI components.
 - shadcn/ui-compatible libraries: translate block structure into the current repo's tokens, radius, borders, type rhythm, icon policy, and accessibility behavior.
 
 When using a block as inspiration:
@@ -36,6 +38,7 @@ When using a block as inspiration:
 - include responsive behavior for mobile/tablet/desktop
 - preserve accessible labels, semantic landmarks, focus states, and keyboard flows
 - avoid adding decorative sections that do not advance the user's product workflow
+- use animated backgrounds or shader-like effects only when they support the product story; keep them behind content, responsive, nonblocking, and reduced-motion aware
 
 ## Product Archetypes
 
