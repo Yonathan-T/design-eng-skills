@@ -1,0 +1,251 @@
+# Technical Product Design Language
+
+Load this reference when the task is a curated technical docs site, OSS/product website, component library, dashboard, studio app, or design-engineering polish pass.
+
+This reference is intentionally portable. It does not depend on private local paths. When the user provides inspiration repos, screenshots, URLs, or local files, inspect those sources directly and translate their patterns into the current project.
+
+## Public Inspiration Sites
+
+Use these as live design references when network access is available. Inspect them for component behavior, composition, copy rhythm, primitive styling, and motion language. Do not clone them blindly; translate the patterns into the current repo's stack and tokens.
+
+- `https://docs.farming-labs.dev`: AI-native docs surface with install commands, agent prompts, framework tabs, themes, code/copy affordances, Ask AI, MCP, llms.txt, search, and agent-readiness ideas.
+- `https://farming-labs.dev`: compact Farming Labs brand/origin surface for the broader `@farming-labs/*` ecosystem.
+- `https://orm.farming-labs.dev`: technical OSS docs/product site for unified schema, typed runtime, and generator-first ORM tooling.
+- `https://farmui.farming-labs.dev`: FarmUI component reference for styled and animated shadcn-based primitives.
+- `https://better-auth.studio`: studio/admin product surface for users, sessions, organizations, events, database, and operational workflows.
+- `https://better-auth.com`: polished auth framework website/docs reference for refined dark UI, docs hierarchy, and technical product storytelling.
+
+If the user also provides local paths to repos behind these websites, inspect those repos for implementation details. Useful places to look are `components/ui/*`, `app/page.tsx`, `app/globals.css`, `app/global.css`, `docs.config.*`, `components/*command*`, `components/*copy*`, `components/*code*`, `components/*theme*`, `components/*layout*`, dashboard widgets, and shared primitive files. Treat local paths as optional source material, not public package requirements.
+
+## Product Archetypes
+
+Use these archetypes to choose the right visual and interaction posture:
+
+- AI-native docs site: strong product signal, searchable docs, command/search patterns, install commands, code/copy affordances, changelog links, agent-facing artifacts such as llms.txt or MCP when relevant.
+- Technical OSS docs: dense but readable navigation, framework tabs, CLI showcase, examples near the top, crisp callouts, support matrix or integration cards, code blocks with useful headers and copy controls.
+- Graph/data product site: constrained hero, grid/rail structure, retrieval/data model proof, install module, technical chips, subdued animated background, clear citations or data-flow explanation.
+- Studio/dashboard app: operational shell, side navigation, command palette, status/watch indicators, widgets, tables, charts, filters, copyable IDs, date controls, tight feedback loops.
+- Curated product website: first-viewport product identity, real demo or terminal/script proof, restrained 3D/canvas only when it explains the product, crisp mono navigation, visible path into docs or app.
+
+## House Style
+
+The shared visual language is precise, technical, and product-forward:
+
+- Hard structure: 1px borders, vertical rails, gutters, separators, dashed/dotted details, inset lines, visible grid logic.
+- Square geometry: zero or tiny radius for technical surfaces; use larger radius only when the existing system requires it.
+- Contrast: black/white or near-black/near-white foundations with muted grays and very restrained accents.
+- Typography: Geist Sans and Geist Mono are common. Mono is used for labels, nav, commands, status, chips, IDs, timestamps, and technical affordances.
+- Microcopy: short, concrete, and product-specific. Avoid generic "seamless/powerful" filler.
+- Texture: pixel textures, repeated-line patterns, subtle noise, grid overlays, or SVG/canvas effects can work when they reinforce the product.
+- Density: docs and dashboards should feel useful immediately. Keep first screens rich but readable.
+- Actions: copy commands, install snippets, "open docs", search, command palette, changelog links, and GitHub links should be visible where useful.
+
+## Docs And OSS Website Recipes
+
+For docs/product websites:
+
+- Make the product name or literal offer obvious in the first viewport.
+- Include a real install command, code snippet, feature proof, search/docs entry, or framework tabs early.
+- Use full-width bands and structured sections, not floating marketing cards.
+- Prefer tight mono labels above sections and concise explanatory copy below.
+- Let the next section peek into the first viewport on landing pages.
+- Use feature cards only when each card says something concrete: API, CLI, search, MCP, analytics, schema, integrations, adapters, plugins, or deployment.
+- Keep docs affordances practical: sidebar states, page actions, copy buttons, callouts, code block headers, search, llms.txt/MCP/API links when relevant.
+
+Useful local patterns to inspect when they exist in the target repo:
+
+- `components/ui/pixel-card.tsx`
+- `components/ui/feature-grid-card.tsx`
+- `components/ui/copy-command.tsx`
+- `components/ui/code-block.tsx`
+- `components/docs-command-search.tsx`
+- `components/ui/framework-tabs.tsx`
+- `app/global.css` or `app/globals.css`
+
+## Studio And Dashboard Recipes
+
+For dense product apps:
+
+- Build an operational shell first: sidebar, top status, search/command palette, route active states, profile/theme controls, and real content panels.
+- Use compact widgets with clear metrics, legends, filters, and timestamps.
+- Make tables scannable: stable columns, copyable IDs, status badges, empty/error/loading rows, pagination, search/filter controls.
+- Use command palette and keyboard shortcuts for repeated actions.
+- Prefer charts that can be read at a glance; use tooltips, muted gridlines, and restrained fills.
+- Keep modal/drawer content task-oriented; avoid explanatory marketing text inside tools.
+- Preserve data fetching and auth behavior; do not fake interaction unless the task is a static prototype.
+
+Useful local patterns to inspect when they exist in the target repo:
+
+- `frontend/src/components/Layout.tsx`
+- `frontend/src/components/CommandPalette.tsx`
+- `frontend/src/components/LiveEventMarquee.tsx`
+- `frontend/src/pages/Dashboard.tsx`
+- `frontend/src/components/dashboard-widgets/*`
+- `frontend/src/components/PixelIcons.tsx`
+- `frontend/src/index.css`
+
+## Component And Token Guidance
+
+- Keep component APIs small and consistent with local primitives.
+- Prefer `cn(...)`, `class-variance-authority`, `tailwind-merge`, and existing `components/ui/*` variants when present.
+- Avoid broad rewrites of shared primitives unless the primitive is the actual problem.
+- Define semantic tokens before scattering raw colors through components.
+- For black/white themes, introduce hierarchy through opacity, borders, texture, spacing, and typography instead of many hues.
+- If a project already uses a theme package, Fumadocs, shadcn/ui, Radix, lucide, or custom primitives, extend those systems rather than bypassing them.
+
+## Primitive Style Contract
+
+Use this contract as the default house style when the current repo has no stronger design system. If the repo already has primitives, align these rules to its tokens and component APIs instead of creating a second system.
+
+### Foundations
+
+- Radius: default to square or tiny radius. Use larger radius only for avatars, pills, maps, charts, or a repo that already has soft geometry.
+- Borders: use 1px borders as structure. Prefer border, divider, rail, inset line, or dotted underline before using heavy shadows.
+- Shadows: use hard offset shadows or very subtle elevation. Avoid soft floating card stacks.
+- Type: body in sans, technical labels in mono. Use mono for commands, IDs, tabs, status, shortcuts, timestamps, and data labels.
+- Labels: short, uppercase or small caps when the repo uses that rhythm; keep letter spacing modest and readable.
+- Density: technical surfaces should feel compact and intentional, not sparse.
+- Focus: every primitive needs visible `focus-visible` treatment that fits the border language.
+- Component source: when FarmUI or shadcn-style primitives exist, compose from those primitives first and only create new primitives when the local system is missing the behavior.
+
+### Buttons
+
+- Primary button: solid foreground/background inversion, clear icon when the action benefits from one, stable height, no text wrapping.
+- Secondary button: bordered or low-contrast fill, same height as primary, quieter text.
+- Ghost button: no border until hover/focus unless it sits in a toolbar.
+- Destructive button: explicit destructive label plus danger tone. Do not rely on icon or color alone.
+- Loading button: preserve width, disable duplicate submit, include a compact loader plus label such as "Saving" or "Creating".
+- Icon button: square hit area, `aria-label`, tooltip for unfamiliar icons, consistent icon size and stroke.
+- FarmUI-style button default: border-aware, icon-capable, tight but touch-safe, strong focus-visible, loading-aware, and animated with restrained hover/press feedback.
+
+### Icons
+
+- Prefer `lucide-react` for common interface actions and objects when it is installed: search, copy, check, close, menu, settings, refresh, external link, arrow, user, users, database, calendar, warning, info, lock, key, mail, chart, file, terminal, command, and theme icons.
+- Import named lucide icons directly, for example `import { Search, Copy, ExternalLink } from "lucide-react";`.
+- Keep lucide icons optically consistent: one size scale per toolbar or row, matching `strokeWidth`, and aligned with text baselines.
+- Use icon-only buttons only with `aria-label` and a tooltip for non-obvious actions.
+- Use custom pixel/block SVG icons only when the product already has that visual language or the object needs a bespoke symbol.
+- Use `simple-icons` or official brand SVGs for brand marks when present; do not use lucide for brand logos.
+- Use dot/matrix loaders from `https://icons.icantcode.fyi/` for loading/status animation, not as general-purpose action icons.
+
+### Links
+
+- Inline links: underline, dotted underline, or clear color contrast. Avoid barely visible text-only links.
+- Technical/action links: pair label with arrow or external-link icon when leaving context.
+- Nav links: active state needs text contrast plus structural marker such as rail, inset line, bracket, underline, or background.
+
+### Inputs And Textareas
+
+- Use labels, not placeholder-only fields.
+- Keep background close to the app canvas and use border/focus ring for affordance.
+- Error state belongs below or next to the field with direct recovery text.
+- Textareas need min height, resize policy, and monospace only for code/config input.
+
+### Selects, Comboboxes, And Filters
+
+- Use select for short closed sets, combobox/search for longer sets, segmented control for 2-5 high-frequency modes.
+- Show active filters as removable chips when more than one can stack.
+- Date/range filters should include presets, custom range, and a visible selected value.
+
+### Checkboxes, Radios, Switches
+
+- Checkbox: multi-select or boolean agreement.
+- Radio: mutually exclusive option set.
+- Switch: immediate on/off setting. Avoid switches for actions that require confirmation.
+- Preserve clear checked, unchecked, disabled, and focus-visible states.
+
+### Badges, Chips, And Status
+
+- Badges should encode state or metadata, not decoration.
+- Include text for status; color alone is insufficient.
+- Use compact mono chips for technical metadata: framework, adapter, route, version, state, role, or tag.
+- Keep badge palettes restrained and mapped to semantic tokens.
+
+### Cards And Panels
+
+- Cards are for repeated items, widgets, modals, or genuinely framed tools.
+- Avoid card-in-card nesting. Use separators, headers, bands, rails, or grid lines instead.
+- Card header should carry title, metadata/status, and primary action when needed.
+- Hoverable cards need visible hover and focus state, not only cursor change.
+- Technical cards can use corner ticks, rails, grid texture, pixel/noise texture, or hard offset shadows when that language already exists.
+
+### Tables And Data Rows
+
+- Keep columns stable and scan-friendly.
+- Use mono for IDs, versions, paths, amounts, or timestamps when that improves scanning.
+- Row actions should be right-aligned or exposed through a predictable menu.
+- Loading rows preserve table structure; empty rows include a next action.
+- Copyable IDs should have truncation plus copy feedback.
+
+### Tabs And Segmented Controls
+
+- Tabs switch views or panels; segmented controls switch modes or periods.
+- Active state should use structural contrast: border, underline, inset marker, or filled segment.
+- Keep tab labels short and avoid wrapping inside compact controls.
+
+### Command Palette And Search
+
+- Command/search surfaces should feel like tools: mono shortcut hint, focused input, grouped results, empty state, keyboard support.
+- Result rows need icon, title, context/path, and selected/focused state.
+- Use command palette for repeated navigation/actions; use page search for content retrieval.
+
+### Code Blocks, Terminals, And Copy Commands
+
+- Code blocks need header, language/title when useful, copy action, and horizontal overflow handling.
+- Terminal blocks should preserve prompt, command, output tone, and copy affordance.
+- Install command modules should be visible early on technical product pages.
+- Copied state should not change layout width.
+
+### Dialogs, Popovers, Tooltips, Toasts
+
+- Dialog: focused task, confirmation, or editor. Include clear title, close affordance, and footer actions.
+- Popover: short-lived inline choice, date picker, quick settings, or metadata.
+- Tooltip: explain icon-only or uncommon controls. Do not hide critical instructions only in a tooltip.
+- Toast: brief confirmation or nonblocking error. Critical recovery belongs inline too.
+
+### Navigation Shells
+
+- Sidebar: clear active route, nested state, scroll behavior, footer/status area when useful.
+- Topbar: route context, search/command entry, status/watch indicator, profile/theme controls.
+- Mobile nav: preserve primary action and search; do not bury core workflow behind unrelated menus.
+
+### Loaders And Skeletons
+
+- Use skeletons for content structure and compact loaders for actions.
+- Technical/agent surfaces should prefer quiet dot-matrix loaders from `https://icons.icantcode.fyi/` when a loader mark is needed.
+- Use the dot/matrix source repo, `https://github.com/icantcodefyi/dot-matrix-animations`, when a copied loader needs to be checked, adapted, or credited.
+- Loader state needs accessible text or `aria-label`.
+- Respect reduced motion; use static dots or skeletons when motion is reduced.
+
+### Charts And Widgets
+
+- Widget frame: title, timeframe/source, value or chart, loading/error/empty fallback.
+- Chart: restrained palette, readable tooltip, labels/legend when needed, and no mystery axes.
+- Dashboard widgets should be resizable or reflowable without breaking text.
+
+## Visual System Checklist
+
+Before editing, identify:
+
+- Canvas: dark, light, split, or themeable.
+- Structure: rails, gutters, cards, sections, tables, command surfaces, or full-bleed scenes.
+- Type: display face, body face, mono face, label case, tracking, and technical microcopy rhythm.
+- Shape: radius scale, border style, shadow language, focus ring style.
+- State color: success, warning, danger, info, selected, active, disabled.
+- Motion: page transitions, hover, loading, content reveal, ambient background.
+- Density: marketing, docs, console, dashboard, or editor.
+- Proof: code sample, terminal, real data, API route, diagram, product preview, chart, or live interaction.
+
+Encode these in existing tokens/classes where possible before adding new one-off styles.
+
+## Quality Bar
+
+A finished design pass should:
+
+- make the main user workflow clearer
+- improve at least one non-happy state
+- maintain or improve accessibility and keyboard behavior
+- keep responsive layouts stable
+- avoid text overlap and layout shift
+- pass the repo's normal checks
+- be visually verified in a browser when a dev server can run

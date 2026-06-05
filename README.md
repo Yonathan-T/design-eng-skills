@@ -1,0 +1,38 @@
+# Design Engineering Skills
+
+[![skills.sh](https://skills.sh/b/farming-labs/design-eng-skills)](https://skills.sh/farming-labs/design-eng-skills)
+
+Reusable design-engineering skills for Codex. The first skill is portable and does not depend on private local example paths.
+
+## Install
+
+From the future GitHub repo:
+
+```bash
+npx skills add farming-labs/design-eng-skills --skill design-engineer
+```
+
+Full GitHub URL form:
+
+```bash
+npx skills add https://github.com/farming-labs/design-eng-skills --skill design-engineer
+```
+
+Or install directly in Codex with:
+
+```text
+$skill-installer install https://github.com/farming-labs/design-eng-skills/tree/main/design-engineer
+```
+
+For local testing:
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R design-engineer ~/.codex/skills/design-engineer
+```
+
+Restart Codex after installing so the skill is discovered.
+
+## Skills
+
+- `design-engineer`: Curated frontend UI craft workflow for React, Next.js, Vite, docs sites, dashboards, studio apps, product websites, interactions, motion, icons, and visual QA.

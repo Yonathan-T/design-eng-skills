@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Engineer"
+  short_description: "Curated technical UI craft workflow"
+  default_prompt: "Use $design-engineer to make this interface feel curated, usable, and production-grade."
