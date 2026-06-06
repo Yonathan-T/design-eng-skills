@@ -9,6 +9,9 @@ This reference is intentionally portable. It does not depend on private local pa
 Use these as live design references when network access is available. Inspect them for component behavior, composition, copy rhythm, primitive styling, and motion language. Do not clone them blindly; translate the patterns into the current repo's stack and tokens.
 
 - `https://www.components.build`: open standard for modern, composable, accessible UI components; use as the default engineering standard for reusable component APIs and design-system guidelines.
+- `https://vercel.com`: developer-platform product reference for crisp typography, technical storytelling, docs/product hierarchy, dashboard polish, deployment/status affordances, and restrained visual systems.
+- `https://e2b.dev`: AI agent cloud reference for infrastructure/product storytelling, agent runtime concepts, sandbox/developer workflows, and technical diagrams.
+- `https://hex.tech`: AI analytics platform reference for data-heavy product UI, collaborative analytics workflows, charts, notebooks, dashboards, and team-oriented product storytelling.
 - `https://docs.farming-labs.dev`: AI-native docs surface with install commands, agent prompts, framework tabs, themes, code/copy affordances, Ask AI, MCP, llms.txt, search, and agent-readiness ideas.
 - `https://farming-labs.dev`: compact Farming Labs brand/origin surface for the broader `@farming-labs/*` ecosystem.
 - `https://orm.farming-labs.dev`: technical OSS docs/product site for unified schema, typed runtime, and generator-first ORM tooling.
@@ -68,6 +71,9 @@ Use these archetypes to choose the right visual and interaction posture:
 - AI-native docs site: strong product signal, searchable docs, command/search patterns, install commands, code/copy affordances, changelog links, agent-facing artifacts such as llms.txt or MCP when relevant.
 - Technical OSS docs: dense but readable navigation, framework tabs, CLI showcase, examples near the top, crisp callouts, support matrix or integration cards, code blocks with useful headers and copy controls.
 - Graph/data product site: constrained hero, grid/rail structure, retrieval/data model proof, install module, technical chips, subdued animated background, clear citations or data-flow explanation.
+- Developer platform: framework/runtime proof, deploy/status flows, dashboard clarity, docs-to-product navigation, changelog/release affordances, and confident system typography.
+- AI infrastructure product: agent/runtime concepts, sandbox or execution diagrams, developer workflow proof, security/trust sections, and crisp technical CTAs.
+- Analytics platform: notebook/dashboard composition, chart/tooltips, data lineage, collaboration states, filter/date controls, and team workflow narratives.
 - Studio/dashboard app: operational shell, side navigation, command palette, status/watch indicators, widgets, tables, charts, filters, copyable IDs, date controls, tight feedback loops.
 - Curated product website: first-viewport product identity, real demo or terminal/script proof, restrained 3D/canvas only when it explains the product, crisp mono navigation, visible path into docs or app.
 
