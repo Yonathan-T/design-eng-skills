@@ -4,6 +4,19 @@ Load this reference when the task is a curated technical docs site, OSS/product 
 
 This reference is intentionally portable. It does not depend on private local paths. When the user provides inspiration repos, screenshots, URLs, or local files, inspect those sources directly and translate their patterns into the current project.
 
+## Design Language Brief
+
+The target design language is technical, product-forward, and component-system aware:
+
+- Structure first: borders, rails, grids, gutters, separators, dotted underlines, and inset markers create the layout logic.
+- Primitives first: build from reusable buttons, inputs, cards, dialogs, command palettes, copy controls, tables, tabs, and status components instead of one-off page markup.
+- Dense but calm: dashboards and docs should be compact, scannable, and useful immediately without feeling crowded.
+- Mono as utility: use mono for commands, routes, IDs, status, chips, shortcuts, tabs, timestamps, and technical labels.
+- Proof over decoration: show install commands, terminal output, code snippets, diagrams, data, charts, previews, or real workflow states.
+- Motion with purpose: hover/press/focus feedback, command/search transitions, copy confirmation, loading status, and restrained background motion.
+- High contrast, restrained accents: use black/white or near-neutral foundations, then introduce accent color sparingly for state, focus, or brand.
+- Agent/developer ready: include copyable commands, searchable docs, clear empty/error/loading states, and tool-friendly content structure.
+
 ## Public Inspiration Sites
 
 Use these as live design references when network access is available. Inspect them for component behavior, composition, copy rhythm, primitive styling, and motion language. Do not clone them blindly; translate the patterns into the current repo's stack and tokens.
@@ -20,6 +33,7 @@ Use these as live design references when network access is available. Inspect th
 - `https://21st.dev`: community React component reference for exploring, copying, and remixing high-quality UI components from designers and developers.
 - `https://react-bits.dev`: React Bits reference for animated UI components, interactive backgrounds, shader-like effects, text animations, and reusable React component ideas.
 - `https://better-auth.studio`: studio/admin product surface for users, sessions, organizations, events, database, and operational workflows.
+- `https://better-auth.farmui.com`: user-provided Better Auth + FarmUI inspiration target; inspect when reachable for auth/product UI composition, component styling, and FarmUI-aligned interaction patterns.
 - `https://better-auth.com`: polished auth framework website/docs reference for refined dark UI, docs hierarchy, and technical product storytelling.
 
 If the user also provides local paths to repos behind these websites, inspect those repos for implementation details. Useful places to look are `components/ui/*`, `app/page.tsx`, `app/globals.css`, `app/global.css`, `docs.config.*`, `components/*command*`, `components/*copy*`, `components/*code*`, `components/*theme*`, `components/*layout*`, dashboard widgets, and shared primitive files. Treat local paths as optional source material, not public package requirements.
@@ -42,6 +56,23 @@ Apply it this way:
 - Publishing: if the output is a component package or registry, keep exports, types, examples, docs, and install paths predictable.
 
 This standard should govern how primitives are built; the visual style below governs how they should feel.
+
+## Component Source Pattern Brief
+
+When implementation source is available from a repo, website source, component registry, screenshot, or user-provided path, use it as source material for component behavior and styling. The recurring patterns to preserve are:
+
+- Shadcn/Radix primitive base: buttons, cards, dialogs, sheets, popovers, commands, tabs, forms, select, checkbox, radio, slider, table, chart, skeleton, toast, and tooltip are built as small forwardRef components with native props, CVA variants, `cn(...)`, and optional `asChild`.
+- Button system: use `variant` and `size` APIs, preserve width while loading, support icon buttons, prefer lucide icons, expose focus-visible states, and use tight heights for dense app UIs.
+- Card anatomy: export `Card`, `CardHeader`, `CardTitle`, `CardDescription`, `CardContent`, and `CardFooter`; use cards for widgets/repeated items and add rails/corner ticks/grid texture when the visual language needs more structure.
+- Command/search: use `cmdk` for command palettes; include search icon, grouped results, separators, empty state, keyboard flow, route/action metadata, and disabled/plugin states.
+- Copy controls: use `navigator.clipboard`, lucide `Copy`/`Check`/`Clipboard` icons, copied feedback for roughly 2 seconds, and package-manager menus for install commands.
+- Docs primitives: feature cards combine lucide foreground/background icons, mono labels, compact chips, 1px rails, corner ticks, and subtle texture; code/terminal blocks need header, copy, language/title, and overflow safety.
+- FarmUI sections: hero and feature sections commonly combine command modules, CTA buttons, GitHub links, preview surfaces, gradients/grid/ripple backgrounds, and section wrappers. Keep these effects restrained and responsive.
+- Studio widgets: dense cards carry metric title, value, timeframe, filter, chart/table/list body, loading/error/empty fallback, and customization/drop-target states.
+- Icon language: lucide is the default for normal UI actions; custom pixel/block SVGs are reserved for a deliberate pixel/studio style; dot/matrix SVGs are for loaders/status.
+- Motion: common sources are Tailwind animation, Framer Motion, keyframes, and hover/transition utilities. Add reduced-motion handling when introducing new motion.
+
+Apply these patterns as guidance, but always adapt them to the target project's current tokens, framework version, accessibility model, and component ownership.
 
 ## Inspirational Component Libraries
 
