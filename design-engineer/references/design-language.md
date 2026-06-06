@@ -25,6 +25,7 @@ Use these as live design references when network access is available. Inspect th
 - `https://vercel.com`: developer-platform product reference for crisp typography, technical storytelling, docs/product hierarchy, dashboard polish, deployment/status affordances, and restrained visual systems.
 - `https://e2b.dev`: AI agent cloud reference for infrastructure/product storytelling, agent runtime concepts, sandbox/developer workflows, and technical diagrams.
 - `https://hex.tech`: AI analytics platform reference for data-heavy product UI, collaborative analytics workflows, charts, notebooks, dashboards, and team-oriented product storytelling.
+- `https://basement.studio`: digital studio reference for immersive product storytelling, bold art direction, 3D/interactive scenes, motion-rich transitions, and high-impact brand systems that still perform.
 - `https://docs.farming-labs.dev`: AI-native docs surface with install commands, agent prompts, framework tabs, themes, code/copy affordances, Ask AI, MCP, llms.txt, search, and agent-readiness ideas.
 - `https://farming-labs.dev`: compact Farming Labs brand/origin surface for the broader `@farming-labs/*` ecosystem.
 - `https://orm.farming-labs.dev`: technical OSS docs/product site for unified schema, typed runtime, and generator-first ORM tooling.
@@ -105,6 +106,7 @@ Use these archetypes to choose the right visual and interaction posture:
 - Developer platform: framework/runtime proof, deploy/status flows, dashboard clarity, docs-to-product navigation, changelog/release affordances, and confident system typography.
 - AI infrastructure product: agent/runtime concepts, sandbox or execution diagrams, developer workflow proof, security/trust sections, and crisp technical CTAs.
 - Analytics platform: notebook/dashboard composition, chart/tooltips, data lineage, collaboration states, filter/date controls, and team workflow narratives.
+- Immersive studio/product site: bold art direction, 3D/canvas scenes, interactive scroll, rich transitions, expressive type, and tactile product moments. Use this only when the product benefits from spectacle and performance can be verified.
 - Studio/dashboard app: operational shell, side navigation, command palette, status/watch indicators, widgets, tables, charts, filters, copyable IDs, date controls, tight feedback loops.
 - Curated product website: first-viewport product identity, real demo or terminal/script proof, restrained 3D/canvas only when it explains the product, crisp mono navigation, visible path into docs or app.
 
@@ -304,6 +306,15 @@ Use this contract as the default house style when the current repo has no strong
 - Widget frame: title, timeframe/source, value or chart, loading/error/empty fallback.
 - Chart: restrained palette, readable tooltip, labels/legend when needed, and no mystery axes.
 - Dashboard widgets should be resizable or reflowable without breaking text.
+
+### 3D And Immersive Scenes
+
+- Use Basement Studio-style inspiration (`https://basement.studio`) for bold 3D, interactive scenes, and art-directed motion only when the product's story benefits from it.
+- Prefer Three.js or the repo's existing 3D/canvas stack for real 3D scenes; do not fake 3D with heavy decorative gradients when actual inspection or interaction matters.
+- Keep the primary scene full-bleed or integrated into the layout, not trapped in a decorative preview card unless the component itself is a card/preview.
+- Keep UI controls, text, and CTAs readable above the scene with clear contrast and stable z-index.
+- Provide reduced-motion behavior and nonblank fallbacks.
+- Verify canvas scenes visually across desktop and mobile: nonblank render, correct framing, no text overlap, acceptable performance, and no console errors.
 
 ## Visual System Checklist
 
