@@ -2,7 +2,7 @@
 
 [![skills.sh](https://skills.sh/b/farming-labs/design-eng-skills)](https://skills.sh/farming-labs/design-eng-skills)
 
-Reusable design-engineering skills for Codex. The first skill is portable and does not depend on private local example paths.
+Reusable design-engineering skills for Codex. The first skill helps design, build, and refine apps, websites, docs, dashboards, studio tools, component libraries, and design systems.
 
 ## Install
 
@@ -35,4 +35,4 @@ Restart Codex after installing so the skill is discovered.
 
 ## Skills
 
-- `design-engineer`: Curated frontend UI craft workflow for React, Next.js, Vite, docs sites, dashboards, studio apps, product websites, interactions, motion, icons, and visual QA.
+- `design-engineer`: Design and build polished frontend experiences for React, Next.js, Vite, docs sites, dashboards, studio apps, product websites, component libraries, and design systems. Covers visual language, primitive/component APIs, interactions, motion, icons, loading states, and browser-based visual QA.

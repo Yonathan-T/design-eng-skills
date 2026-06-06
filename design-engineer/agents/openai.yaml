@@ -1,4 +1,4 @@
 interface:
   display_name: "Design Engineer"
-  short_description: "Curated technical UI craft workflow"
-  default_prompt: "Use $design-engineer to make this interface feel curated, usable, and production-grade."
+  short_description: "Build apps, sites, and component systems"
+  default_prompt: "Use $design-engineer to design or build a polished app, website, dashboard, docs site, or component library."
