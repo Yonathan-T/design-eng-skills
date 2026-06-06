@@ -7,6 +7,7 @@ Use this reference before adding animation, transitions, loaders, status indicat
 - `https://animations.dev/vocabulary`: shared motion terms for entrances/exits, sequencing, transforms, state transitions, scroll, feedback, and easing.
 - `https://icons.icantcode.fyi/`: dot/matrix loader gallery for quiet 5x5 SVG loading indicators.
 - `https://github.com/icantcodefyi/dot-matrix-animations`: source repo for the dot/matrix loader set.
+- `https://pixeliconlibrary.com`: open-source 24px-grid pixel icon library for retro/block icon systems.
 
 ## Motion Vocabulary To Use In Decisions
 
@@ -57,6 +58,7 @@ Keep loaders small, subdued, and semantically labeled. Do not replace real progr
 - Import named lucide icons directly from `lucide-react`; avoid hand-drawing SVGs when lucide already has the symbol.
 - Match lucide `size`, `strokeWidth`, opacity, and alignment within each toolbar, nav item, table row, or button group.
 - Use custom pixel SVG icons only when the product already uses a pixel/block language or the icon needs to match a technical studio-style geometry.
+- Use Pixel Icon Library when a consistent pixelated icon set is desired; keep the set visually separate from lucide action icons unless the whole product intentionally uses pixel geometry.
 - Use `simple-icons` for brand logos when installed and appropriate.
 - Icon-only buttons need accessible labels or tooltips.
 - Match stroke width, optical size, and alignment across a toolbar.

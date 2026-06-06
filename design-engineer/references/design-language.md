@@ -33,6 +33,7 @@ Use these as live design references when network access is available. Inspect th
 - `https://efferd.com`: Efferd section/block library reference for clean, ready-to-use shadcn blocks, responsive section composition, and fast product-page assembly.
 - `https://21st.dev`: community React component reference for exploring, copying, and remixing high-quality UI components from designers and developers.
 - `https://react-bits.dev`: React Bits reference for animated UI components, interactive backgrounds, shader-like effects, text animations, and reusable React component ideas.
+- `https://pixeliconlibrary.com`: open-source pixelated icon library reference for 24px-grid pixel icons when a product needs a deliberate retro/block icon style.
 - `https://better-auth.studio`: studio/admin product surface for users, sessions, organizations, events, database, and operational workflows.
 - `https://better-auth.farmui.com`: user-provided Better Auth + FarmUI inspiration target; inspect when reachable for auth/product UI composition, component styling, and FarmUI-aligned interaction patterns.
 - `https://better-auth.com`: polished auth framework website/docs reference for refined dark UI, docs hierarchy, and technical product storytelling.
@@ -209,6 +210,7 @@ Use this contract as the default house style when the current repo has no strong
 - Keep lucide icons optically consistent: one size scale per toolbar or row, matching `strokeWidth`, and aligned with text baselines.
 - Use icon-only buttons only with `aria-label` and a tooltip for non-obvious actions.
 - Use custom pixel/block SVG icons only when the product already has that visual language or the object needs a bespoke symbol.
+- Use Pixel Icon Library (`https://pixeliconlibrary.com`) when the project needs a consistent pixelated icon set; keep icons on the 24px grid and align them optically with buttons, badges, and rows.
 - Use `simple-icons` or official brand SVGs for brand marks when present; do not use lucide for brand logos.
 - Use dot/matrix loaders from `https://icons.icantcode.fyi/` for loading/status animation, not as general-purpose action icons.
 
